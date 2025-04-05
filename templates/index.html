@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vedant Pawar | Data Analyst</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Vedant Pawar</h1>
+            <div class="profile-picture">
+                <img src="static/images/Ved.jpg" alt="Vedant Pawar">
+              </div>
+            <p>Data Analyst | Data Enthusiast | Problem Solver</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Resume Download Section -->
+            <section class="resume-section" id="resume">
+            <h2>Resume</h2>
+            <p>You can download my updated resume by clicking the button below.</p>
+            <a href="/static/Resume.pdf" download class="resume-btn">📄 Download My Resume</a>
+            </section>
+  
+        </div>
+    </header>
+
+    <!-- <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Hello! I'm Vedant Pawar, a passionate Data Analyst with a strong background in Computer Engineering. I love transforming data into meaningful insights that drive business decisions. I specialize in data visualization, statistical analysis, and creating dashboards to communicate findings effectively.</p>
+        </div>
+    </section> -->
+    <!-- About Me Section -->
+<section class="about-me" id="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <div class="bio">
+        <p>Hi, I'm <strong>Vedant Pawar</strong> — a passionate <strong>Data Analyst</strong> who loves transforming raw data into valuable insights. I’m skilled in Python, Excel, SQL, and Tableau, and I enjoy working on real-world datasets to uncover trends and patterns.</p>
+      </div>
+      <div class="skills">
+        <h3>Skills</h3>
+        <ul>
+          <li><img src="/static/icons/python.jpg" alt="Python"> Python</li>
+          <li><img src="/static/icons/powerbi.jpg" alt="Microsoft Power BI"> Power BI</li>
+          <li><img src="/static/icons/excel.jpg" alt="Excel"> Excel</li>
+          <li><img src="/static/icons/sql.jpg" alt="SQL"> SQL</li>
+          <li><img src="/static/icons/tabelua.png" alt="Tableau"> Tableau</li>
+
+        </ul>
+      </div>
+      <!-- <div class="timeline">
+        <h3>My Journey</h3>
+        <ul>
+          <li><span>2022:</span> Started learning Python for data analysis</li>
+          <li><span>2023:</span> Completed first major project — Myntra Sales Analysis</li>
+          <li><span>2024:</span> Learned Tableau, Excel, and SQL deeply</li>
+          <li><span>2025:</span> Building a strong portfolio and preparing for roles</li>
+        </ul>
+      </div> -->
+    </div>
+  </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>Python</li>
+                <li>SQL</li>
+                <li>Excel</li>
+                <li>Power BI</li>
+                <li>Tableau</li>
+                <li>Data Cleaning</li>
+                <li>Data Visualization</li>
+                <li>Statistical Analysis</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- <section id="projects" class="section">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Myntra Sales Data Analysis</h3>
+                <p>Analyzed Myntra sales data to uncover customer behavior patterns and sales trends using Python, Pandas, and Matplotlib. Built a clear visual dashboard and generated actionable insights.</p>
+                <a href="https://github.com/VedantPawar7/Myntra-Sales-Data-Analysis" target="_blank">View Project</a>
+            </div>
+        </div>
+    </section> -->
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <h2>My Projects</h2>
+      
+        <div class="project-scroll-wrapper">
+          <div class="project-container">
+      
+            <!-- Project Card 1 -->
+            <div class="project-card">
+              <h3>Myntra Sales Data Analysis</h3>
+              <p>A comprehensive analysis of Myntra's sales data using Python, pandas, and matplotlib.</p>
+              <p><strong>Tools:</strong> Python, Pandas, Matplotlib</p>
+              <a class="btn" href="https://github.com/Vedant05122003/Myntra-Analysis-Project">GitHub</a>
+            </div>
+      
+            <!-- Project Card 2 -->
+            <div class="project-card">
+              <h3>Olympic Data Analytics</h3>
+              <p>Performed data analysis on Olympic Games datasets to uncover trends in medal counts, athlete performance, and sport popularity.</p>
+              <p><strong>Tools:</strong> Power BI, Power Query, Excel, DAX</p>
+              <a class="btn" href="https://github.com/Vedant05122003/Olympic-Data-Analytics">GitHub</a>
+            </div>
+      
+            <!-- Project Card 3 -->
+            <div class="project-card">
+              <h3>Amazon Sales Analysis</h3>
+              <p>Created an interactive Tableau dashboard to analyze Amazon sales by category, region, and time periods.</p>
+              <p><strong>Tools:</strong> Tableau, Excel</p>
+              <a class="btn" href="#">GitHub</a>
+              <a class="btn view" href="https://github.com/Vedant05122003/Amazon-Sales-Data-Analysis-using-Tableau">View Dashboard</a>
+            </div>
+      
+          </div>
+        </div>
+      </section>
+         
+    </div>
+  </section>
+  
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Feel free to reach out via email or this form:</p>
+            <form action="/contact" method="POST" class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <ul class="contact-list">
+                <li>Email: vedantvpawar09@gmail.com</li>
+                <li><a href="https://www.linkedin.com/in/vedant-pawar-a103a92b6" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/Vedant05122003" target="_blank">GitHub</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Vedant Pawar. All Rights Reserved.</p>
+        </div>
+    </footer>
+      
+</body>
+
+</html>
