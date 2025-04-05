@@ -351,4 +351,34 @@ footer {
     margin-bottom: 20px;
     color: #333;
   }
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .skill {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #f0f4f8;
+    padding: 10px 16px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    font-weight: 500;
+    transition: transform 0.2s ease;
+    min-width: 140px;
+  }
+  
+  .skill:hover {
+    transform: translateY(-3px);
+  }
+  
+  .skill img {
+    width: 24px;
+    height: 24px;
+  }
+
   
