@@ -345,6 +345,15 @@ footer {
     transform: scale(1.05);
     transition: 0.3s ease;
   }
+@media (max-width: 768px) {
+  .profile-picture {
+    position: static;
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: center;
+  }
+}
+
   .projects h2 {
     text-align: center;
     font-size: 2rem;
