@@ -1,0 +1,5 @@
+{
+  "build": {
+    "start": "python app.py"
+  }
+}
