@@ -68,5 +68,5 @@ def contact():
     return redirect('/')
 
 if __name__ == '__main__':
-    print("🔥 Flask app running with email + CSV")
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 8080))  # Railway provides PORT env variable
+    app.run(host='0.0.0.0', port=port)
