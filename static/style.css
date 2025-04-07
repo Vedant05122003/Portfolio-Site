@@ -440,3 +440,37 @@ footer {
   font-size: 1rem;
 }
 
+/* -------------------------
+   Skills Section Styling
+-------------------------- */
+.skills-wrapper {
+  background-color: white;
+  padding: 20px;
+  border-radius: 16px;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  background-color: #f5f7fa;
+  border-radius: 12px;
+  width: 180px;
+  font-weight: 500;
+}
+
+.skill img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
