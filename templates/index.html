@@ -20,7 +20,7 @@
                 <img src="static/images/Ved.jpg" alt="Vedant Pawar">
               </div>
             <p class="hero-subtitle">
-                Data Analyst • Data Enthusiast • Problem Solver
+                <span id="typing-text"></span>
             </p>
             <div class="social-icons">
                 <a href="https://github.com/Vedant05122003" target="_blank">
@@ -211,6 +211,46 @@
             <p>&copy; 2025 Vedant Pawar. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <script>
+const roles = [
+  "Data Analyst",
+  "Power BI Developer",
+  "Python Enthusiast",
+  "Problem Solver"
+];
+
+let roleIndex = 0;
+let charIndex = 0;
+let currentText = "";
+
+function typeEffect() {
+  const text = roles[roleIndex];
+
+  if (charIndex < text.length) {
+    currentText += text.charAt(charIndex);
+    document.getElementById("typing-text").textContent = currentText;
+    charIndex++;
+    setTimeout(typeEffect, 100);
+  } else {
+    setTimeout(eraseEffect, 1500);
+  }
+}
+
+function eraseEffect() {
+  if (currentText.length > 0) {
+    currentText = currentText.slice(0, -1);
+    document.getElementById("typing-text").textContent = currentText;
+    setTimeout(eraseEffect, 50);
+  } else {
+    roleIndex = (roleIndex + 1) % roles.length;
+    charIndex = 0;
+    setTimeout(typeEffect, 300);
+  }
+}
+
+typeEffect();
+</script>
       
 </body>
 
