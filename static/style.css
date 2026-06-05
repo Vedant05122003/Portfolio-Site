@@ -496,3 +496,23 @@ footer {
   object-fit: contain;
 }
 
+.about-me,
+.resume-section,
+.project-card,
+.cert-card,
+.skills-wrapper {
+    color: #333;
+}
+
+.about-me h2,
+.projects h2,
+#certifications h2,
+#contact h2 {
+    color: #ffffff;
+}
+
+.project-card h3,
+.project-card p,
+.cert-card p {
+    color: #333;
+}
