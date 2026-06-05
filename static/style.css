@@ -504,7 +504,9 @@ footer {
     color: #333;
 }
 
-.about-me h2,
+.about-me h2 {
+    color: #1e293b;
+}
 .projects h2,
 #certifications h2,
 #contact h2 {
