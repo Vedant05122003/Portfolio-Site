@@ -258,13 +258,13 @@ footer {
     margin: 0 auto;
   }
   
-  .bio, .skills, .timeline {
+.bio, .skills, .timeline {
     flex: 1 1 300px;
-    background: #fff;
+    background: transparent;
     border-radius: 12px;
     padding: 20px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.05);
-  }
+    box-shadow: none;
+}
   
   .skills ul, .timeline ul {
     list-style: none;
@@ -710,4 +710,10 @@ footer {
 
 .projects h2 {
     color: white;
+}
+
+.about-me p {
+    color: #e2e8f0 !important;
+    font-size: 1.1rem;
+    line-height: 1.8;
 }
