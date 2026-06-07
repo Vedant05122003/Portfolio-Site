@@ -199,7 +199,7 @@ nav ul li a:hover {
 }
 
 .contact-list a {
-    color: #2a5298;
+    color: #cbd5e1;
     text-decoration: none;
     font-weight: 500;
 }
@@ -519,15 +519,20 @@ footer {
     margin-bottom: 30px;
 }
 
-  #certifications {
-  padding: 60px 20px;
-  background-color: #f9f9f9;
+ #certifications {
+    padding: 80px 20px;
+
+    background: transparent;
 }
 
 #certifications .section-title {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 30px;
+    color: white;
+
+    text-align: center;
+
+    font-size: 2.5rem;
+
+    margin-bottom: 40px;
 }
 
 .certs-container {
@@ -539,18 +544,29 @@ footer {
 }
 
 .cert-card {
-  min-width: 250px;
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  scroll-snap-align: start;
-  padding: 15px;
-  transition: transform 0.3s ease;
+    min-width: 260px;
+
+    background: rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    border-radius: 20px;
+
+    padding: 15px;
+
+    transition: 0.3s ease;
 }
 
 .cert-card:hover {
-  transform: scale(1.05);
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 15px 35px rgba(96,165,250,0.3);
+}
+.cert-card p {
+    color: white;
 }
 
 .cert-preview {
@@ -716,4 +732,49 @@ footer {
     color: #e2e8f0 !important;
     font-size: 1.1rem;
     line-height: 1.8;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.08);
+    color: white;
+    backdrop-filter: blur(15px);
+}
+
+.contact-form button {
+    background: linear-gradient(
+        90deg,
+        #2563eb,
+        #7c3aed
+    );
+
+    border: none;
+    padding: 15px;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+#contact {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px;
+
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    border-radius: 24px;
 }
