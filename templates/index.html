@@ -1,99 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vedant Pawar | Data Analyst</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vedant Pawar | Data Analyst</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-
 <body>
-    <header>
-        <div class="container">
-            <h1>Vedant Pawar</h1>
-            <div class="profile-picture">
-                <img src="static/images/Ved.jpg" alt="Vedant Pawar">
-              </div>
-            <p class="hero-subtitle">
-                <span id="typing-text"></span>
-            </p>
-            <div class="social-icons">
-                <a href="https://github.com/Vedant05122003" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
 
-                <a href="https://www.linkedin.com/in/vedant-pawar-a103a92b6" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <!-- Resume Download Section -->
-            <section class="resume-section" id="resume">
-            <h2>Resume</h2>
-            <p>You can download my updated resume by clicking the button below.</p>
-            <a href="/static/Resume.pdf" download class="resume-btn">📄 Download My Resume</a>
-            </section>
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#hero" class="nav-logo">VP<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="/static/Resume.pdf" download class="nav-resume-btn">
+      <i class="fas fa-download"></i> Resume
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#about" onclick="closeMobile()">About</a></li>
+      <li><a href="#skills" onclick="closeMobile()">Skills</a></li>
+      <li><a href="#projects" onclick="closeMobile()">Projects</a></li>
+      <li><a href="#certifications" onclick="closeMobile()">Certifications</a></li>
+      <li><a href="#contact" onclick="closeMobile()">Contact</a></li>
+      <li><a href="/static/Resume.pdf" download class="mobile-resume">Download Resume</a></li>
+    </ul>
+  </div>
+</nav>
 
-            <section class="stats-section">
-                <div class="stat-card">
-                    <h2>3+</h2>
-                    <p>Projects</p>
-                </div>
-
-                <div class="stat-card">
-                    <h2>3+</h2>
-                    <p>Certifications</p>
-                </div>
-
-                <div class="stat-card">
-                    <h2>2+</h2>
-                    <p>Years Learning</p>
-                    </div>
-            </section>
-  
-        </div>
-    </header>
-
-    <!-- <section id="about" class="section">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>Hello! I'm Vedant Pawar, a passionate Data Analyst with a strong background in Computer Engineering. I love transforming data into meaningful insights that drive business decisions. I specialize in data visualization, statistical analysis, and creating dashboards to communicate findings effectively.</p>
-        </div>
-    </section> -->
-    <!-- About Me Section -->
-<section class="about-me" id="about">
-    <h2>About Me</h2>
-    <div class="about-content">
-      <div class="bio">
-        <p>Hi, I'm <strong>Vedant Pawar</strong> — a passionate <strong>Data Analyst</strong> who loves transforming raw data into valuable insights. I’m skilled in Python, Excel, SQL, and Tableau, and I enjoy working on real-world datasets to uncover trends and patterns.</p>
-      </div>
-        
-      <!-- <div class="timeline">
-        <h3>My Journey</h3>
-        <ul>
-          <li><span>2022:</span> Started learning Python for data analysis</li>
-          <li><span>2023:</span> Completed first major project — Myntra Sales Analysis</li>
-          <li><span>2024:</span> Learned Tableau, Excel, and SQL deeply</li>
-          <li><span>2025:</span> Building a strong portfolio and preparing for roles</li>
-        </ul>
-      </div> -->
+<!-- HERO -->
+<section id="hero" class="hero">
+  <div class="hero-bg-orbs">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">👋 Available for opportunities</div>
+    <div class="profile-picture">
+      <img src="static/images/Ved.jpg" alt="Vedant Pawar">
     </div>
-  </section>
- <div id="skills" class="skills-section">
-  <h2>Skills</h2>
-  <div class="skills-wrapper">
+    <h1 class="hero-name">Vedant <span class="grad-text">Pawar</span></h1>
+    <p class="hero-subtitle">
+      <span class="typing-prefix">I'm a </span>
+      <span id="typing-text" class="typed-word"></span>
+      <span class="cursor-blink">|</span>
+    </p>
+    <p class="hero-desc">Transforming raw data into actionable insights. Specialized in Python, SQL, Power BI &amp; Tableau.</p>
+    <div class="hero-btns">
+      <a href="#projects" class="btn-primary">View My Work <i class="fas fa-arrow-right"></i></a>
+      <a href="/static/Resume.pdf" download class="btn-outline"><i class="fas fa-download"></i> Download CV</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://github.com/Vedant05122003" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/vedant-pawar-a103a92b6" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:vedantvpawar09@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+  <div class="stats-section">
+    <div class="stat-card">
+      <h2 class="counter" data-target="3">0</h2>
+      <p>Projects</p>
+    </div>
+    <div class="stat-card">
+      <h2 class="counter" data-target="3">0</h2>
+      <p>Certifications</p>
+    </div>
+    <div class="stat-card">
+      <h2 class="counter" data-target="2">0</h2>
+      <p>Years Learning</p>
+    </div>
+  </div>
+  <a href="#about" class="scroll-down-hint">
+    <i class="fas fa-chevron-down"></i>
+  </a>
+</section>
+
+<!-- ABOUT -->
+<section class="about-me section-pad" id="about">
+  <div class="section-header reveal">
+    <span class="section-tag">Who I Am</span>
+    <h2>About Me</h2>
+  </div>
+  <div class="about-content reveal">
+    <div class="about-card">
+      <div class="about-icon-row">
+        <div class="about-icon-box"><i class="fas fa-chart-bar"></i></div>
+        <div class="about-icon-box"><i class="fas fa-database"></i></div>
+        <div class="about-icon-box"><i class="fab fa-python"></i></div>
+      </div>
+      <p>Hi, I'm <strong>Vedant Pawar</strong> — a passionate <strong>Data Analyst</strong> who loves transforming raw data into valuable insights. I'm skilled in Python, Excel, SQL, and Tableau, and I enjoy working on real-world datasets to uncover trends and patterns.</p>
+      <p>I'm a Computer Engineering graduate with a keen interest in data-driven problem solving, dashboard design, and business intelligence. I believe every dataset tells a story — my job is to find it.</p>
+      <div class="about-tags">
+        <span>Data Analytics</span>
+        <span>Business Intelligence</span>
+        <span>Data Visualization</span>
+        <span>Statistical Analysis</span>
+        <span>Dashboard Design</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<div id="skills" class="skills-section section-pad">
+  <div class="section-header reveal">
+    <span class="section-tag">What I Use</span>
+    <h2>Skills &amp; Tools</h2>
+  </div>
+  <div class="skills-wrapper reveal">
     <div class="skills-grid">
       <div class="skill"><img src="/static/icons/python.jpg" alt="Python"> Python</div>
       <div class="skill"><img src="/static/icons/powerbi.jpg" alt="Power BI"> Power BI</div>
@@ -104,200 +131,251 @@
       <div class="skill"><img src="/static/icons/pandas.png" alt="Pandas"> Pandas</div>
       <div class="skill"><img src="/static/icons/matplotlib.png" alt="Matplotlib"> Matplotlib</div>
       <div class="skill"><img src="/static/icons/figma.png" alt="Figma"> Figma</div>
-      <div class="skill"><img src="/static/icons/visual.png" alt="visualization"> Data Visualization</div>
+      <div class="skill"><img src="/static/icons/visual.png" alt="Data Visualization"> Data Visualization</div>
     </div>
   </div>
 </div>
 
+<!-- PROJECTS -->
+<section class="projects section-pad" id="projects">
+  <div class="section-header reveal">
+    <span class="section-tag">My Work</span>
+    <h2>Featured Projects</h2>
+  </div>
+  <div class="project-grid">
 
-<!--     <section id="skills" class="section">
-        <div class="container">
-            <h2>Skills</h2>
-            <ul class="skills-list">
-                <li>Python</li>
-                <li>SQL</li>
-                <li>Excel</li>
-                <li>Power BI</li>
-                <li>Tableau</li>
-                <li>Data Cleaning</li>
-                <li>Data Visualization</li>
-                <li>Statistical Analysis</li>
-            </ul>
-        </div>
-    </section>
- -->
-    <!-- <section id="projects" class="section">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Myntra Sales Data Analysis</h3>
-                <p>Analyzed Myntra sales data to uncover customer behavior patterns and sales trends using Python, Pandas, and Matplotlib. Built a clear visual dashboard and generated actionable insights.</p>
-                <a href="https://github.com/VedantPawar7/Myntra-Sales-Data-Analysis" target="_blank">View Project</a>
-            </div>
-        </div>
-    </section> -->
-    <!-- Projects Section -->
-    <section class="projects" id="projects">
-        <h2>My Projects</h2>
-      
-        <div class="project-scroll-wrapper">
-          <div class="project-container">
-      
-            <!-- Project Card 1 -->
-            <div class="project-card">
-              <h3>Myntra Sales Data Analysis</h3>
-              <p>A comprehensive analysis of Myntra's sales data using Python, pandas, and matplotlib.</p>
-              <p><strong>Tools:</strong> Python, Pandas, Matplotlib</p>
-              <a class="btn" href="https://github.com/Vedant05122003/Myntra-Analysis-Project">GitHub</a>
-            </div>
-      
-            <!-- Project Card 2 -->
-            <div class="project-card">
-              <h3>Olympic Data Analytics</h3>
-              <p>Performed data analysis on Olympic Games datasets to uncover trends in medal counts, athlete performance, and sport popularity.</p>
-              <p><strong>Tools:</strong> Power BI, Power Query, Excel, DAX</p>
-              <a class="btn" href="https://github.com/Vedant05122003/Olympic-Data-Analytics">GitHub</a>
-            </div>
-      
-            <!-- Project Card 3 -->
-            <div class="project-card">
-              <h3>Amazon Sales Analysis</h3>
-              <p>Created an interactive Tableau dashboard to analyze Amazon sales by category, region, and time periods.</p>
-              <p><strong>Tools:</strong> Tableau, Excel</p>
-              <a class="btn" href="https://github.com/Vedant05122003/Amazon-Sales-Data-Analysis-using-Tableau">GitHub</a>
-<!--               <a class="btn view" href="https://github.com/Vedant05122003/Amazon-Sales-Data-Analysis-using-Tableau">View Dashboard</a>
-            </div> -->
-      
-          </div>
-        </div>
-      </section>
-         
-    </div>
-  </section>
-    <section id="certifications">
-  <h2 class="section-title">My Certifications</h2>
-  <div class="certs-container">
-    <div class="cert-card">
-      <a href="static/certs/cert1.pdf" target="_blank">
-        <embed src="static/certs/cert1.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" class="cert-preview">
-        <p>Microsoft Power BI</p>
+    <div class="project-card reveal">
+      <div class="project-card-top">
+        <div class="project-icon"><i class="fas fa-shopping-bag"></i></div>
+        <span class="project-tag">Python · Pandas</span>
+      </div>
+      <h3>Myntra Sales Data Analysis</h3>
+      <p>A comprehensive analysis of Myntra's sales data to uncover customer behavior patterns and sales trends.</p>
+      <div class="project-tools">
+        <span>Python</span><span>Pandas</span><span>Matplotlib</span>
+      </div>
+      <a class="btn-card" href="https://github.com/Vedant05122003/Myntra-Analysis-Project" target="_blank">
+        <i class="fab fa-github"></i> View on GitHub
       </a>
     </div>
-    
-    <div class="cert-card">
-      <a href="static/certs/cert2.pdf" target="_blank">
-        <embed src="static/certs/cert2.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" class="cert-preview">
-        <p>PwC Job Simulation(Forage)</p>
+
+    <div class="project-card reveal">
+      <div class="project-card-top">
+        <div class="project-icon"><i class="fas fa-medal"></i></div>
+        <span class="project-tag">Power BI · DAX</span>
+      </div>
+      <h3>Olympic Data Analytics</h3>
+      <p>Analyzed Olympic Games datasets to uncover trends in medal counts, athlete performance, and sport popularity.</p>
+      <div class="project-tools">
+        <span>Power BI</span><span>Power Query</span><span>Excel</span><span>DAX</span>
+      </div>
+      <a class="btn-card" href="https://github.com/Vedant05122003/Olympic-Data-Analytics" target="_blank">
+        <i class="fab fa-github"></i> View on GitHub
       </a>
     </div>
-    
-      <div class="cert-card">
-      <a href="static/certs/cert3.pdf" target="_blank">
-        <embed src="static/certs/cert3.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" class="cert-preview">
-        <p>Accenture Job Simulation(Forage)</p>
+
+    <div class="project-card reveal">
+      <div class="project-card-top">
+        <div class="project-icon"><i class="fab fa-amazon"></i></div>
+        <span class="project-tag">Tableau · Excel</span>
+      </div>
+      <h3>Amazon Sales Analysis</h3>
+      <p>Created an interactive Tableau dashboard to analyze Amazon sales by category, region, and time periods.</p>
+      <div class="project-tools">
+        <span>Tableau</span><span>Excel</span>
+      </div>
+      <a class="btn-card" href="https://github.com/Vedant05122003/Amazon-Sales-Data-Analysis-using-Tableau" target="_blank">
+        <i class="fab fa-github"></i> View on GitHub
       </a>
     </div>
-    
-      
-    <!-- Add more cert cards -->
+
   </div>
 </section>
-  
 
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>Feel free to reach out via email or this form:</p>
-            <form action="/contact" method="POST" class="contact-form">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-            <ul class="contact-list">
-                <li>Email: vedantvpawar09@gmail.com</li>
-                <li><a href="https://www.linkedin.com/in/vedant-pawar-a103a92b6" target="_blank">LinkedIn</a></li>
-                <li><a href="https://github.com/Vedant05122003" target="_blank">GitHub</a></li>
-            </ul>
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="section-pad">
+  <div class="section-header reveal">
+    <span class="section-tag">Credentials</span>
+    <h2>My Certifications</h2>
+  </div>
+  <div class="certs-container">
+    <div class="cert-card reveal">
+      <a href="static/certs/cert1.pdf" target="_blank">
+        <div class="cert-icon-wrap"><i class="fas fa-certificate"></i></div>
+        <embed src="static/certs/cert1.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" class="cert-preview">
+        <div class="cert-info">
+          <p class="cert-title">Microsoft Power BI</p>
+          <span class="cert-link">View Certificate <i class="fas fa-arrow-right"></i></span>
         </div>
-    </section>
-    
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Vedant Pawar. All Rights Reserved.</p>
+      </a>
+    </div>
+    <div class="cert-card reveal">
+      <a href="static/certs/cert2.pdf" target="_blank">
+        <div class="cert-icon-wrap"><i class="fas fa-certificate"></i></div>
+        <embed src="static/certs/cert2.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" class="cert-preview">
+        <div class="cert-info">
+          <p class="cert-title">PwC Job Simulation (Forage)</p>
+          <span class="cert-link">View Certificate <i class="fas fa-arrow-right"></i></span>
         </div>
-    </footer>
+      </a>
+    </div>
+    <div class="cert-card reveal">
+      <a href="static/certs/cert3.pdf" target="_blank">
+        <div class="cert-icon-wrap"><i class="fas fa-certificate"></i></div>
+        <embed src="static/certs/cert3.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" class="cert-preview">
+        <div class="cert-info">
+          <p class="cert-title">Accenture Job Simulation (Forage)</p>
+          <span class="cert-link">View Certificate <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
 
-    <script>
-const roles = [
-  "Data Analyst",
-  "Power BI Developer",
-  "Python Enthusiast",
-  "Problem Solver"
-];
+<!-- CONTACT -->
+<section id="contact" class="section section-pad">
+  <div class="section-header reveal">
+    <span class="section-tag">Let's Talk</span>
+    <h2>Get In Touch</h2>
+    <p class="section-sub">Open to data analyst roles, freelance projects &amp; collaborations.</p>
+  </div>
+  <div class="contact-layout reveal">
+    <div class="contact-info">
+      <div class="contact-info-card">
+        <i class="fas fa-envelope"></i>
+        <div>
+          <p class="ci-label">Email</p>
+          <a href="mailto:vedantvpawar09@gmail.com">vedantvpawar09@gmail.com</a>
+        </div>
+      </div>
+      <div class="contact-info-card">
+        <i class="fab fa-linkedin"></i>
+        <div>
+          <p class="ci-label">LinkedIn</p>
+          <a href="https://www.linkedin.com/in/vedant-pawar-a103a92b6" target="_blank">vedant-pawar</a>
+        </div>
+      </div>
+      <div class="contact-info-card">
+        <i class="fab fa-github"></i>
+        <div>
+          <p class="ci-label">GitHub</p>
+          <a href="https://github.com/Vedant05122003" target="_blank">Vedant05122003</a>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form-wrap">
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          {% for msg in messages %}
+            <div class="flash-msg">{{ msg }}</div>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+      <form action="/contact" method="POST" class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" name="name" placeholder="Vedant Pawar" required>
+          </div>
+          <div class="form-group">
+            <label>Your Email</label>
+            <input type="email" name="email" placeholder="hello@example.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">
+          Send Message <i class="fas fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
 
-let roleIndex = 0;
-let charIndex = 0;
-let currentText = "";
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <p class="footer-logo">VP<span>.</span></p>
+    <p class="footer-copy">&copy; 2025 Vedant Pawar. All Rights Reserved.</p>
+    <div class="footer-socials">
+      <a href="https://github.com/Vedant05122003" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/vedant-pawar-a103a92b6" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:vedantvpawar09@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+</footer>
 
-function typeEffect() {
-  const text = roles[roleIndex];
-
-  if (charIndex < text.length) {
-    currentText += text.charAt(charIndex);
-    document.getElementById("typing-text").textContent = currentText;
-    charIndex++;
-    setTimeout(typeEffect, 100);
-  } else {
-    setTimeout(eraseEffect, 1500);
-  }
-}
-
-function eraseEffect() {
-  if (currentText.length > 0) {
-    currentText = currentText.slice(0, -1);
-    document.getElementById("typing-text").textContent = currentText;
-    setTimeout(eraseEffect, 50);
-  } else {
-    roleIndex = (roleIndex + 1) % roles.length;
-    charIndex = 0;
-    setTimeout(typeEffect, 300);
-  }
-}
-
-typeEffect();
-</script>
-    
+<!-- SCRIPTS -->
 <script src="https://unpkg.com/scrollreveal"></script>
-
 <script>
-ScrollReveal().reveal('.about-me', {
-    delay: 200,
-    distance: '50px',
-    origin: 'bottom'
+/* Navbar scroll */
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 50);
 });
 
-ScrollReveal().reveal('.skills-section', {
-    delay: 300,
-    distance: '50px',
-    origin: 'left'
+/* Hamburger */
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
 });
+function closeMobile() {
+  hamburger.classList.remove('open');
+  mobileMenu.classList.remove('open');
+}
 
-ScrollReveal().reveal('.project-card', {
-    delay: 200,
-    interval: 150,
-    distance: '50px',
-    origin: 'bottom'
-});
+/* Typing effect */
+const roles = ["Data Analyst","Power BI Developer","Python Enthusiast","Problem Solver"];
+let ri = 0, ci = 0, del = false, cur = '';
+function type() {
+  const word = roles[ri];
+  cur = del ? word.slice(0, ci--) : word.slice(0, ci++);
+  document.getElementById('typing-text').textContent = cur;
+  if (!del && ci > word.length) { del = true; setTimeout(type, 1600); return; }
+  if (del && ci < 0) { del = false; ri = (ri + 1) % roles.length; }
+  setTimeout(type, del ? 48 : 95);
+}
+type();
 
-ScrollReveal().reveal('.cert-card', {
-    delay: 200,
-    interval: 100
+/* Counter animation */
+const counters = document.querySelectorAll('.counter');
+const cObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target, target = +el.dataset.target;
+    let n = 0;
+    const step = Math.ceil(target / 30);
+    const t = setInterval(() => {
+      n = Math.min(n + step, target);
+      el.textContent = n + '+';
+      if (n >= target) clearInterval(t);
+    }, 50);
+    cObs.unobserve(el);
+  });
+}, { threshold: 0.6 });
+counters.forEach(c => cObs.observe(c));
+
+/* ScrollReveal */
+ScrollReveal().reveal('.reveal', { delay: 150, distance: '40px', origin: 'bottom', interval: 100 });
+ScrollReveal().reveal('.project-card', { delay: 100, distance: '40px', origin: 'bottom', interval: 120 });
+ScrollReveal().reveal('.cert-card', { delay: 100, distance: '30px', origin: 'bottom', interval: 100 });
+
+/* Active nav on scroll */
+const sections = document.querySelectorAll('section[id], div[id]');
+const navAs = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
+  navAs.forEach(a => {
+    a.classList.remove('active');
+    if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+  });
 });
 </script>
-    
-      
-</body>
 
+</body>
 </html>
